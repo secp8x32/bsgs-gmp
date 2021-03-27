@@ -7,7 +7,7 @@
 #include <iostream>
 #include <iterator>
 #include <map>
-#include "gmpxx.h"
+#include <gmpxx.h>
 
 void bsgs(const mpz_class &g, const mpz_class &p, const mpz_class &Q)
 {
