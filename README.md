@@ -1,5 +1,5 @@
 # bsgs-gmp
-Simplest Baby-Step-Giant-Step algorithm implementation with libgmp. This is a c++ port with libgmp of: [dlp](https://github.com/rgerganov/dlp).
+Simplest [Baby-Step-Giant-Step](https://en.wikipedia.org/wiki/Baby-step_giant-step) algorithm implementation with libgmp. This is a c++ port with libgmp of: [dlp](https://github.com/rgerganov/dlp).
 
 Programs solving the discrete logarithm problem.
 
