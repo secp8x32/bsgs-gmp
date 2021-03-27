@@ -7,7 +7,7 @@
 #include <iostream>
 #include <iterator>
 #include <map>
-#include <gmpxx.h>
+#include "gmpxx.h"
 
 void bsgs(const mpz_class &g, const mpz_class &p, const mpz_class &Q)
 {
@@ -25,8 +25,7 @@ void bsgs(const mpz_class &g, const mpz_class &p, const mpz_class &Q)
     mpz_class e(Q);
     mpz_invert(gi.get_mpz_t(), g.get_mpz_t(), p.get_mpz_t());
     mpz_pow_ui(factor.get_mpz_t(), gi.get_mpz_t(), m);
-    mpz_mod(factor.get_mpz_t(), factor.get_mpz_t(), p.get_mpz_t());
-
+    factor %= p;
 
     for (int i = 0; i < m; i++) {
         if (table->find(e) != table->end()) {
@@ -36,7 +35,7 @@ void bsgs(const mpz_class &g, const mpz_class &p, const mpz_class &Q)
             break;
         }
         e *= factor;
-        mpz_mod(e.get_mpz_t(), e.get_mpz_t(), p.get_mpz_t());
+        e %= p;
     }
     delete table;
 }
