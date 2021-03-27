@@ -17,6 +17,7 @@ Dependencies and Building
     libgmp-6.2.1
     
 I have built this with MinGW-64 on Windows10.
+
 Change libgmp path in makefile before building.
 
 Run
